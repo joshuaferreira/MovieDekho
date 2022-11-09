@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieDekho!</title>
+    <link href="movie_card.css" rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <!--Main Font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    
+    <!--Javascript-->
+    <script src="movie_card.js"></script>
+
+</head>
+
+<body>
+      <!-- Navigation Bar-->
+        <div class="flex-container container-fluid">
+
+            <!-- Logo -->
+            <div class="p-2 "><a href="../MovieDekho!.html"><img src="../../Logos/MovieDekho.png" height="30px" width="90px"></a></div>
+
+            <!--Search Bar-->
+            <div class="p-2 col-5">
+                <div class="input-group">
+                    <!--Input Group-->
+                    <input type="text" class="form-control search-bar" placeholder="Search..." id="search_bar">
+
+                    <!--Button-->
+                    <button class="btn yellow" onclick="search()" id="seach_btn"><i class="bi bi-film"></i></button>
+                </div>
+            </div>
+            
+            <div class="p-2">
+                <div class="btn-group">
+                    <div class="btn-group">
+                        <!--Top 100-->
+                        <button type="button" class="btn dropdown-toggle navbutton" data-bs-toggle="dropdown">Top 10</button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item hov" href="https://moviedekho86240459.wordpress.com/2022/10/19/top-10-movies-of-all-time/">Movies <i class="bi bi-camera-reels"></i></i></a>
+                        <a class="dropdown-item hov" href="https://moviedekho86240459.wordpress.com/2022/10/28/top-10-tv-shows-of-all-time/">Television <i class="bi bi-tv"></i></a>
+                        </div>
+
+                        <!-- About -->
+                        <a href="#about"><button type="button" class="btn navbutton">About</button></a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="container" id="content">
+        
+            <h2 id="Title"></h2>
+        
+
+        <table class="table table-hover">
+            <tr id="first-row">
+                <td rowspan="5" id="display-poster"><img src="" class="float-end" id="poster"></td>
+                <td class="align-middle" id="Director"></td>
+            </tr>
+            <tr>
+                <td class="align-middle" id="Writers"></td>
+            </tr>
+            <tr>
+                <td class="align-middle"><img src='../../Logos/IMDB.png' width="70px">       <span id="IMDB"></span></td>
+            </tr>
+            <tr>
+                <td class="align-middle"><img src='../../Logos/Metacritic.png' width="80px">     <span id="METASCORE"></span></td>
+            </tr>
+            <tr>
+                <td class="align-middle"><img src='../../Logos/Rotten Tomatoes.png' width="70px">        <span id="ROTTENTOMATOES"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="align-middle"><i><blockquote class="blockquote text-center" ><span id="Tagline"></span></blockquote></i></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="ovr">Overview: </td>
+            </tr>
+            <tr>
+                <td colspan="2" id = "Overview"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="cst">Cast: </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="Cast"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="genr">Genres: </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="Genres"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="details">Details: </td>
+            </tr>
+            <tr>
+                <td id="Certificate"></td><td id="Runtime"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="trailers">Trailers: </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="video"></td>
+            </tr>
+        </table>
+        <h3>Similar Movies:</h3>
+        <div class="card-group" id="similar">
+        </div>
+             
+      </div>
+    
+    <!-- Site footer -->
+    <footer class="site-footer" id="about">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h6>About</h6>
+                <p class="text-justify">
+                    MovieDekho is a part of the Fundamentals of Web Designing Mini Project.
+                    <br>
+                    It has been developed by <b>C107 Joshua Ferreira</b> using HTML5, CSS, Javascript and Bootstrap (as of 18/09/2022)
+                    <br>
+                    This project was made under the guidance and supervision of Professor Abhijeet Dongaonkar
+                </p>    
+            </div>
+        </div>
+        <hr>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">In case of any improvements contact - 
+        <a href="mailto:thejoshuaferreira@gmail.com">Joshua Ferreira</a>.
+            </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+
+            <li><a class="whatsapp" href="https://api.whatsapp.com/send?phone=9324227295" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+
+            <li><a class="instagram" href="https://www.instagram.com/joshtheboss1902/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+
+            <li><a class="github" href="https://github.com/joshuaferreira" target="_blank"><i class="bi bi-github"></i></a></li>
+
+            <li><a class="linkedin" href="https://www.linkedin.com/in/joshua-ferreira-b673a8224" target="_blank"><i class="bi bi-linkedin"></i></a></li>   
+            </ul>
+        </div>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>
